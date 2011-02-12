@@ -9,10 +9,8 @@ class AmazonWebServicesFormula < Formula
   def standard_install
     rm Dir['bin/*.cmd'] # Remove Windows versions
     prefix.install "bin"
-    # Put the .jars in prefix/jars/lib, which isn't linked to the Cellar
-    # This will prevent conflicts with other versions of these jars.
     (lib+'ec2-api-jars').install 'lib'
-    (lib+'ec2-api-jars/bin').make_symlink '../bin'
+    (lib+'ec2-api-jars/bin').make_symlink prefix+'bin'
   end
 
   # Use this method to generate standard caveats.
