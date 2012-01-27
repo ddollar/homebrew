@@ -9,7 +9,8 @@ class Nix < Formula
 
   def install
     system "./configure", "--prefix=#{prefix}",
-      "--with-bzip2=/usr/bin", "--localstatedir=#{var}/nix"
+      "--with-bzip2=/usr", "--localstatedir=#{var}/nix/state",
+      "--with-store-dir=#{var}/nix/store"
     system "make install"
   end
 end
