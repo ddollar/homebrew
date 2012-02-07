@@ -1,9 +1,9 @@
 require 'formula'
 
 class Foreman < Formula
-  url 'http://assets.foreman.io/foreman/foreman-0.38.0.tgz'
+  url 'http://assets.foreman.io/foreman/foreman-0.39.0.tgz'
   homepage 'http://ddollar.github.com/foreman'
-  md5 '3878deaabfd52a64691a11381438d58e'
+  md5 '95b8f2716f2b16c34c430e6bc519e928'
 
   skip_clean %w( bin lib )
 
