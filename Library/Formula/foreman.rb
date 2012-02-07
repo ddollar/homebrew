@@ -8,8 +8,6 @@ class Foreman < Formula
   skip_clean %w( bin lib )
 
   def install
-    prefix.mkpath
-    bin.mkpath
     prefix.install Dir["*"]
     bin.install prefix/"foreman"
   end

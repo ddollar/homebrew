@@ -8,8 +8,6 @@ class Heroku < Formula
   skip_clean %w( bin lib )
 
   def install
-    prefix.mkpath
-    bin.mkpath
     prefix.install Dir["*"]
     bin.install prefix/"heroku"
   end
